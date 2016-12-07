@@ -7,7 +7,9 @@ namespace TUDAI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            gvNoticias.DataSource = new NoticiaBusiness().GetNoticias();
+
+            var noticBuss = new NoticiaBusiness();
+            gvNoticias.DataSource = noticBuss.GetNoticias();
             gvNoticias.DataBind();
         }
     }
